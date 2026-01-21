@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProteinPro – Whey Protein</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f4f6f8; color: #333; }
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    header h1 { color: #4caf50; }
+
+    .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    .product { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .product img { width: 100%; border-radius: 10px; }
+
+    .price { font-size: 22px; color: #4caf50; font-weight: bold; margin: 10px 0; }
+
+    button {
+      padding: 12px 20px;
+      background: #4caf50;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover { background: #43a047; }
+
+    h3 { margin-top: 20px; }
+    ul { margin-left: 20px; margin-top: 10px; }
+    li { margin-bottom: 6px; }
+
+    .description { margin-top: 15px; line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      .product { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ProteinPro</h1>
+  <p>Premium Whey Protein</p>
+</header>
+
+<div class="container">
+  <div class="product">
+
+    <img src="pro.png.webp" alt="Whey Protein" />
+
+    <div>
+      <h2>ProteinPro 100% Whey Protein</h2>
+      <p class="price">$39.99</p>
+      <button>Add to Cart</button>
+
+      <div class="description">
+        ProteinPro Whey Protein is a high-quality protein supplement designed to support muscle growth, recovery, and overall fitness. It is ideal for gym-goers, athletes, and anyone looking to meet their daily protein needs.
+      </div>
+
+      <h3>Key Benefits (Pros)</h3>
+      <ul>
+        <li>High protein content per serving</li>
+        <li>Supports muscle growth and recovery</li>
+        <li>Fast absorption</li>
+        <li>Helps improve strength and performance</li>
+        <li>Low in sugar and fat</li>
+        <li>Easy to mix and digest</li>
+      </ul>
+
+      <h3>Possible Cons</h3>
+      <ul>
+        <li>Not suitable for lactose-intolerant users</li>
+        <li>Should not replace whole foods</li>
+        <li>Overuse may cause digestive discomfort</li>
+      </ul>
+
+      <h3>How to Use</h3>
+      <p class="description">
+        Mix 1 scoop with 200–250ml of water or milk. Consume post-workout or as recommended by a nutritionist.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

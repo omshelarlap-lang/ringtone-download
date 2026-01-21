@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Free Ringtone Download</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Ad box */
+.ad-box {
+  background: rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Timer */
+#timer {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+/* Button default (locked) */
+.download-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #888;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+/* Button active */
+.download-btn.active {
+  background: linear-gradient(90deg, #00b09b, #96c93d);
+  color: white;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(0,176,155,0.6); }
+  50% { box-shadow: 0 0 25px rgba(0,176,155,1); }
+  100% { box-shadow: 0 0 10px rgba(0,176,155,0.6); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🎵 Free Ringtone</h2>
+
+  <!-- 🔴 AD AREA -->
+  <div class="ad-box">
+    🔔 Advertisement<br>
+    (AdSense / Adsterra / PropellerAds)
+  </div>
+
+  <div id="timer">Please wait: 10s</div>
+
+  <button id="downloadBtn" class="download-btn" disabled>
+    ⬇ Download
+  </button>
+</div>
+
+<script>
+let time = 10;
+const timer = document.getElementById("timer");
+const btn = document.getElementById("downloadBtn");
+
+const countdown = setInterval(() => {
+  time--;
+  timer.innerText = "Please wait: " + time + "s";
+
+  if (time <= 0) {
+    clearInterval(countdown);
+    timer.innerText = "Download ready!";
+    btn.disabled = false;
+    btn.classList.add("active");
+  }
+}, 1000);
+
+btn.addEventListener("click", () => {
+  if (!btn.disabled) {
+    window.location.href = "ad.html";
+  }
+});
+</script>
+
+</body>
+</html>
+    

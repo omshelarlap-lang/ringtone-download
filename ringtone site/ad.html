@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Preparing Download</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #141E30, #243B55);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.timer {
+  font-size: 42px;
+  color: #ff4d4d;
+  margin: 15px 0;
+}
+
+.ad-box {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>⏳ Please Wait</h2>
+  <p>Your ringtone is preparing</p>
+
+  <!-- 🔴 AD AREA -->
+  <div class="ad-box">
+    🔔 Advertisement<br>
+    (30 seconds)
+  </div>
+
+  <div class="timer" id="timer">30</div>
+  <p>Download will start automatically</p>
+</div>
+
+<script>
+let time = 30;
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+  time--;
+  timer.innerText = time;
+
+  if (time <= 0) {
+    clearInterval(countdown);
+    window.location.href = "ringtones/tone1.mp3";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
